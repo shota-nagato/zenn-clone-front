@@ -1,5 +1,5 @@
-import { ArticleCardType } from '@/types'
 import { Box, Card, CardContent, Typography } from '@mui/material'
+import { ArticleCardType } from '@/types'
 
 const omit = (text: string) => (len: number) => (ellipsis: string) =>
   text.length >= len ? text.slice(0, len - ellipsis.length) + ellipsis : text
@@ -9,7 +9,7 @@ const ArticleCard = (props: ArticleCardType) => {
     <Card>
       <CardContent>
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             mb: 2,
             minHeight: 48,

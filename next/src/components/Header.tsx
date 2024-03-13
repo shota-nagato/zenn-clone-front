@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Header = () => {
   return (
     <AppBar
-      position='static'
+      position="static"
       sx={{
         backgroundColor: 'white',
         color: 'black',
@@ -13,7 +13,7 @@ const Header = () => {
         py: '12px',
       }}
     >
-      <Container maxWidth='lg' sx={{ px: 2 }}>
+      <Container maxWidth="lg" sx={{ px: 2 }}>
         <Box
           sx={{
             display: 'flex',
@@ -22,14 +22,14 @@ const Header = () => {
           }}
         >
           <Box>
-            <Link href='/'>
-              <Image src='/logo.png' width={133} height={40} alt='logo' />
+            <Link href="/">
+              <Image src="/logo.png" width={133} height={40} alt="logo" />
             </Link>
           </Box>
           <Box>
             <Button
-              color='primary'
-              variant='contained'
+              color="primary"
+              variant="contained"
               sx={{
                 color: 'white',
                 textTransform: 'none',
@@ -41,8 +41,8 @@ const Header = () => {
               Sign in
             </Button>
             <Button
-              color='primary'
-              variant='outlined'
+              color="primary"
+              variant="outlined"
               sx={{
                 textTransform: 'none',
                 fontSize: 16,

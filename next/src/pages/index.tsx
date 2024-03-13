@@ -1,15 +1,15 @@
-import ArticleCard from '@/components/ArticleCard'
-import Loading from '@/components/Loading'
-import Error from '@/components/Error'
-import { ArticleType } from '@/types'
-import { fetcher } from '@/utils'
 import { Box, Container, Grid, Pagination } from '@mui/material'
-import { styles } from '@/styles'
 import camelcaseKeys from 'camelcase-keys'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import useSWR from 'swr'
 import { useRouter } from 'next/router'
+import useSWR from 'swr'
+import ArticleCard from '@/components/ArticleCard'
+import Error from '@/components/Error'
+import Loading from '@/components/Loading'
+import { styles } from '@/styles'
+import { ArticleType } from '@/types'
+import { fetcher } from '@/utils'
 
 const Index: NextPage = () => {
   const router = useRouter()
@@ -29,7 +29,7 @@ const Index: NextPage = () => {
 
   return (
     <Box css={styles.pageMinHeight} sx={{ backgroundColor: '#e6f2ff' }}>
-      <Container maxWidth='md' sx={{ pt: 6 }}>
+      <Container maxWidth="md" sx={{ pt: 6 }}>
         <Grid container spacing={4}>
           {articles.map((article: ArticleType, i: number) => (
             <Grid key={i} item xs={12} md={6}>
