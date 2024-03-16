@@ -24,5 +24,11 @@
         "tabWidth": 2
       }
     ]
+  },
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
   }
 }

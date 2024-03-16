@@ -1,6 +1,20 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
-export default {
+module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['./jest.setup.ts']
+  setupFilesAfterEnv: ['./jest.setup.ts'],
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  globals: {
+    'ts-jest': {
+      tsconfig: {
+        jsx: 'react-jsx',
+      },
+    },
+},
 };
